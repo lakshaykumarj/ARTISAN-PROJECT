@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Artisans Product Addition</title>
+    <link rel="stylesheet" type="text/css" href="Add product.css">
+</head>
+
+<body class="BGColor">
+    <nav class="NavColor">
+        <div id="nav1">
+            <ul class="NavColor">
+                <li><a href="http://localhost:8080//THE%20ONLY%20WEB%20APPLICATION%20TO%20BE%20TOUCHED%20HERE//display2.jsp">Display Data? Click here</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div id="nav2">
+            <ul class="NavColor">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Crete new account</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+        <h1>
+            Artisan - Insert new Prodcut <br> Enter the following details for a new Product
+        </h1>
+        <form action="AddProduct.jsp" method="post">
+            <span>
+        <span>
+		<label for="artisanName">Artisan group</label>
+		<input type="text" name="artisanName" required>
+		</span>
+            <span class="spacing"></span>
+            <label for="productName">Product Name</label>
+            <input type="text" name="productName" required><br>
+            </span>
+            <br><br><br>
+            <span>
+        <span>
+		<label for="costPrice">Bought At Rs:</label>
+		<input type="text" name="costPrice"" required>
+		</span>
+            <span class="spacing"></span>
+            <label for="quantity">Quantity:</label>
+            <input type="text" name="quantity" required><br>
+            </span>
+            <br><br><br>
+            <span>
+        <span>
+            <input type="submit" value="INSERT">
+
+        </form>
+    </div>
+</body>
+
+</html>

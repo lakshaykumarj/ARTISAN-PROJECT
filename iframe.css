@@ -1,0 +1,48 @@
+#display {
+    padding-left: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 1200px;
+    overflow: auto;
+    border: 0.5px;
+    /* Add scrollbars to the #display div */
+}
+
+#iframeDisplay {
+    width: 100%;
+    height: 100%;
+    border: 0.5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    /* Hide the default styles */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 50% (for radio) or 4px (for checkbox);
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Custom styles for checked radio buttons and checkboxes */
+
+input[type="radio"]:checked::before,
+input[type="checkbox"]:checked::before {
+    content: "\2713";
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 20px (for radio) or 18px (for checkbox);
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    background-color: black;
+    border-radius: 50% (for radio) or 4px (for checkbox);
+}

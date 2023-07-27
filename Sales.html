@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Artisans sales</title>
+    <link rel="stylesheet" type="text/css" href="Add product.css">
+    <link rel="stylesheet" type="text/css" href="iframe.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#form1").submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                var jspUrl = "sales1.jsp?";
+                var iframe = $('<iframe>', {
+                    src: jspUrl,
+                    frameborder: 1, // Add border to the iframe
+                    width: '100%',
+                    height: '100%',
+                    css: {
+                        overflow: 'auto' // Show vertical scrollbar when content exceeds iframe height
+                    }
+                });
+                $("#display").empty().append(iframe);
+
+            });
+            $("#form2").submit(function(event) {
+
+            });
+        });
+    </script>
+</head>
+
+<body class="BGColor">
+    <nav class="NavColor">
+        <div id="nav1">
+            <ul class="NavColor">
+                <li><a href="http://localhost:8080//THE%20ONLY%20WEB%20APPLICATION%20TO%20BE%20TOUCHED%20HERE//display2.jsp">Display Data? Click here</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div id="nav2">
+            <ul class="NavColor">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Crete new account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h3>
+        Chek your current log to see pruchase Requests !
+    </h3>
+    <form id="form1" method="post">
+        <input type="submit" value="Request log">
+    </form>
+    <br><br><br>
+    <div id="display">
+        <iframe id="iframeDisplay" frameborder="0" width="0%" height="0" src=""></iframe>
+    </div>
+
+    <div id="container" style="height:550px">
+        <h1>
+            Accept the demand by filling their details below
+        </h1>
+        <form id="form2" action="sales2.jsp" method="post">
+            <span>
+                <span>
+                    <label for="requestor">Customer</label>
+                    <input type="text" name="requestor" required>
+                </span>
+            <span class="spacing"></span>
+            <label for="productName">Product Name</label>
+            <input type="text" name="productName" required><br>
+            </span>
+            <br><br><br>
+            <label for="quantity">Quantity</label>
+            <input type="text" name="quantity" required>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Accept demand">
+        </form>
+    </div>
+</body>
+
+</body>
+
+</html>

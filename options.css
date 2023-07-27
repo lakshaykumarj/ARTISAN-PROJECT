@@ -1,0 +1,204 @@
+/* position? text-shadow(horizontal,vertical,blur radius,color) 
+  Padding 10px for all inner elements -> the container*/
+
+body {
+    margin-left: 200px;
+    margin-top: 110px;
+    background-image: url("https://i.pinimg.com/originals/00/42/a6/0042a63862b84ad955b1d468026e4055.jpg");
+    min-width: 100px;
+    height: 100%;
+}
+
+body::before {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.7;
+}
+
+.headings {
+    text-shadow: 1px 1px 0 #444;
+    font-size: 25px;
+    opacity: 0.9;
+}
+
+p {
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.BGColor {
+    color: #000 !important;
+    background-color: #e4dcd3 !important
+}
+
+
+/* TOP NAVIGATION PANELS CSS'S */
+
+nav {
+    border: 6px dashed brown;
+    position: sticky;
+    opacity: 1;
+    z-index: 100;
+    animation: nav-slide 1s forwards;
+}
+
+#nav1,
+#nav2 {
+    display: inline-block;
+}
+
+#nav1 {
+    margin-right: 90px;
+}
+
+.NavColor {
+    color: #fff !important;
+    background-color: #ae987d !important
+}
+
+#nav1 ul {
+    width: 870px;
+    justify-content: space-between;
+}
+
+#nav2 ul {
+    width: 440px;
+    justify-content: space-between;
+}
+
+#nav1 ul,
+#nav2 ul {
+    list-style: none;
+    height: 50px;
+    margin: 0px;
+    padding-left: 10px;
+    border: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+
+/*ALL LINKS HAVE THIS RULES*/
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 42px;
+    opacity: 0.8;
+}
+
+
+/*THE BOX CONTAINER DEFENITIONS*/
+
+
+/* Container has its width and height, a rectangular border with box-shadow h,v,b_rad,color,spread 
+                The margin of body is th margin of container ; 40px padded for internal contents*/
+
+#container {
+    width: 1100px;
+    height: 800px;
+    padding-left: 190px;
+    background-color: rgba(255, 255, 255, 0.001);
+    margin: 0;
+    border-width: 10px 5px 5px 10px;
+    border-color: 10px solid black;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
+}
+
+
+/*Center aligned sign in header. Inherit ironically stops inheriting padding and set it to zero */
+
+h1 {
+    text-align: center;
+    padding: inherit;
+    padding-right: 110px;
+    font-weight: 540;
+    /*dont show text-icon in cursor when it is hovered over*/
+    user-select: none;
+}
+
+
+/*All labels and inputs are always inline - br is used for line breaks inside */
+
+label,
+input {
+    font-size: 23px;
+    display: inline-block;
+    user-select: none;
+}
+
+
+/*Submit button is ovalised and size is changed a bit with respect to the options*/
+
+.submit {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    background-color: blanchedalmond;
+    font-size: 30px;
+    width: 700px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+    transition: transform 0.8s ease-in-out;
+}
+
+.submit:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 12px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+/*Specially for hyperlinks cursor is default treats as text*/
+
+a {
+    padding: 0px;
+    padding: inherit;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*default link*/
+
+a:link {
+    color: black;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: black;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* selected link */
+
+a:active {
+    color: darkmagenta;
+}
+
+
+/*Just to space last 3 terms inline and inline block? flex?*/
+
+.spacing {
+    padding: inherit;
+    padding-left: 155px;
+}

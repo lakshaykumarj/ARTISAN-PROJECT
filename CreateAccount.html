@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE ACCOUNT</title>
+    <link rel="stylesheet" href="CreateAccountsCss.css">
+</head>
+
+<body>
+    <!-- Enclose everything inside main container -->
+    <div id="container">
+        <span><h1>CREATE ACCOUNT</h1></span>
+        <br>
+        <form id="form1" action="CreateAccount.jsp" target="_self" method="POST">
+            <label for="username">Username:</label>
+
+            <input id="username" name="username" form="form1" placeholder="only letters 6-20 characters" type="text" pattern="[a-zA-Z]+" required>
+            <br><br>
+            <label for="email"> Email:</label>
+            <input id="email" name="email" form="form1" placeholder="xyz@student.tce.edu" type="email">
+            <br><br>
+            <label for="password">Password:</label>
+
+            <input id="password" name="password" form="form1" placeholder="atleast 1 caps, symbol ,number >8 chars" type="password" pattern="^(?=.*[\W])(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$" required>
+            <br><br>
+            <label for="retype">Retype<br> Password:</label>
+            <input id="retype" name="retype" form="form1" placeholder="eg:123#xyz2" type="password" pattern="^(?=.*[\W])(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$" required>
+            <br><br>
+            <span style="margin-left:130px">    <input id="submit" name="sumbit" type="submit">
+            
+        </form>
+    </div>
+    <br>
+    <a>Privacy Policy</a>
+    <span class="spacing"></span>
+            <a>About</a>
+            <span class="spacing"></span>
+            <a>Terms and conditions</a>
+</body>
+
+</html>

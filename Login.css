@@ -1,0 +1,249 @@
+ /* position? text-shadow(horizontal,vertical,blur radius,color) 
+           Padding 10px for all inner elements -> the container*/
+ 
+ body {
+     margin-left: 400px;
+     margin-top: 100px;
+     background-image: url("https://i.pinimg.com/originals/00/42/a6/0042a63862b84ad955b1d468026e4055.jpg");
+     min-width: 100px;
+ }
+ 
+ body::before {
+     content: "";
+     top: 0;
+     left: 0;
+     z-index: 100;
+     opacity: 0.7;
+ }
+ 
+ .headings {
+     text-shadow: 1px 1px 0 #444;
+     font-size: 25px;
+     opacity: 0.9;
+ }
+ 
+ p {
+     opacity: 0.9;
+     font-size: 15px;
+ }
+ 
+ .BGColor {
+     color: #000 !important;
+     background-color: #e4dcd3 !important
+ }
+ /* TOP NAVIGATION PANELS CSS'S */
+ 
+ nav {
+     border: 6px dashed brown;
+     position: sticky;
+     opacity: 1;
+     z-index: 100;
+     animation: nav-slide 1s forwards;
+ }
+ 
+ #nav1,
+ #nav2 {
+     display: inline-block;
+ }
+ 
+ #nav1 {
+     margin-right: 90px;
+ }
+ 
+ .NavColor {
+     color: #fff !important;
+     background-color: #ae987d !important
+ }
+ 
+ #nav1 ul {
+     width: 870px;
+     justify-content: space-between;
+ }
+ 
+ #nav2 ul {
+     width: 440px;
+     justify-content: space-between;
+ }
+ 
+ #nav1 ul,
+ #nav2 ul {
+     list-style: none;
+     height: 50px;
+     margin: 0px;
+     padding-left: 10px;
+     border: none;
+     white-space: nowrap;
+     display: flex;
+     align-items: center;
+ }
+ /*ALL LINKS HAVE THIS RULES*/
+ 
+ a {
+     text-decoration: none;
+     color: #6a3907;
+     opacity: 0.9;
+     font-family: 'Lobster', cursive;
+     font-size: 18px;
+ }
+ 
+ a:hover {
+     color: #F0F0F0;
+     opacity: 1;
+ }
+ 
+ a:active {
+     color: whitesmoke;
+     opacity: 1;
+     font-size: 19px;
+ }
+ /*THE HEADING TEXT*/
+ 
+ h1 {
+     text-align: center;
+     font-family: monospace;
+     font-size: 34px;
+     opacity: 0.8;
+ }
+ /*THE BOX CONTAINER DEFENITIONS*/
+ /* Container has its width and height, a rectangular border with box-shadow h,v,b_rad,color,spread 
+           The margin of body is th margin of container ; 40px padded for internal contents*/
+ 
+ #container {
+     width: 600px;
+     height: 500px;
+     padding-left: 120px;
+     background-color: rgba(255, 255, 255, 0.001);
+     margin: 0;
+     border-width: 10px 5px 5px 10px;
+     border-color: 10px solid black;
+     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
+ }
+ /*Center aligned sign in header. Inherit ironically stops inheriting padding and set it to zero */
+ 
+ h1 {
+     text-align: center;
+     padding: inherit;
+     padding-right: 90px;
+     font-weight: 540;
+     /*dont show text-icon in cursor when it is hovered over*/
+     user-select: none;
+ }
+ /*All labels and inputs are always inline - br is used for line breaks inside */
+ 
+ label,
+ input {
+     font-size: 23px;
+     display: inline-block;
+     user-select: none;
+ }
+ /* for all input text boxes ,minor border is set */
+ 
+ #username,
+ #password,
+ #retype,
+ #email {
+     margin-left: 30px;
+     padding-left: 10px;
+     padding-right: 5px;
+     border-radius: 5px;
+     border: 4px;
+     box-shadow: 0 0 6px 3px rgba(100, 100, 100, 0.8);
+     font-family: cursive;
+     transition: transform 0.3s ease-in-out;
+ }
+ /* All in the same phase */
+ 
+ #username {
+     margin-left: 25px;
+ }
+ 
+ #email {
+     margin-left: 75px;
+ }
+ /* hovering beauty */
+ 
+ #username:hover,
+ #password:hover,
+ #retype:hover,
+ #email:hover {
+     border-radius: 6px;
+     border: 5px;
+     box-shadow: 0 0 8px 6px rgba(100, 100, 100, 0.8);
+     /* transform property is used to apply transformations to an element, such as scaling, rotating, skewing, or translating (moving) it. */
+     transform: scale(1.02);
+     /* transform: scale(1.5); - scales the element by 150% of its original size.
+            transform: rotate(45deg); - rotates the element by 45 degrees.
+            transform: skew(20deg, 10deg); - skews the element along the X and Y axis.
+            transform: translate(50px, 100px); - moves the element 50 pixels to the right and 100 pixels down */
+ }
+ /*placeholder styling*/
+ 
+ input[type="text"],
+ input[type="password"],
+ input[type="email"] {
+     font-size: 20px;
+ }
+ 
+ input::placeholder {
+     color: lightgrey;
+     font-style: italic;
+     opacity: 8.0;
+     font-size: 13px;
+ }
+ /*Submit button is ovalised and size is changed a bit*/
+ 
+ #submit {
+     cursor: pointer;
+     margin-right: 80px;
+     margin-top: 40px;
+     border: 2px solid black;
+     border-radius: 25px;
+     padding: 3px;
+     font-weight: bold;
+     background-color: rgb(247, 242, 242);
+     font-size: 16px;
+     width: 100px;
+     height: 45px;
+     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+     transition: transform 0.1s ease-in-out;
+ }
+ 
+ #submit:hover {
+     transform: scale(1.01);
+     box-shadow: 1px 1px 12px 3px rgba(0, 0, 0, 0.15);
+ }
+ /*Specially for hyperlinks cursor is default treats as text*/
+ 
+ a {
+     padding: 0px;
+     padding: inherit;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     cursor: pointer;
+ }
+ /*default link*/
+ 
+ a:link {
+     color: blue;
+ }
+ /* visited link */
+ 
+ a:visited {
+     color: blueviolet;
+ }
+ /* mouse over link */
+ 
+ a:hover {
+     text-decoration-line: underline;
+     color: blue;
+ }
+ /* selected link */
+ 
+ a:active {
+     color: darkmagenta;
+ }
+ /*Just to space last 3 terms inline and inline block? flex?*/
+ 
+ .spacing {
+     padding: inherit;
+     padding-left: 155px;
+ }
