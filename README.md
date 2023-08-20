@@ -2,9 +2,9 @@
 This project uses HTML,CSS along with jquery to perform sales related operations on jsp. 
 It has 2 uncompleted modules : sales and display. Sessions to be implemented for concurrency management
 **Main modules**
-The project has the following content as shown below:
-1)Homepage - It is where the webpage starts, it is purely based on html and css codes 
-2)Create Account  to create a new Account for a user.
+The project has the following content as shown below: <br>
+1)Homepage - It is where the webpage starts, it is purely based on html and css codes <br>
+2)Create Account  to create a new Account for a user.<br>
 3)Login for login using their account
 4)Options to select the option for action
 4)Add product , Purchase , sales(under completion) for respective actions
